@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "7d88de0b-b266-42d1-86db-d60964e1aa77",
+		"name": "shipment-tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "4345306"
+	},
+	"item": [
+		{
+			"name": "localhost:3001/apis/my-backend/pubsub/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    [\n        \"name\",\n        \"Rohit\"\n    ],\n    [\n        \"eamil\",\n        \"rohit@gmail.com\"\n    ],\n    [\n        \"age\",\n        28\n    ]\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/apis/my-backend/pubsub/create"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/apis/my-backend/pubsub/order?order_id=order_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/apis/my-backend/pubsub/order?order_id=order_1",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"apis",
+						"my-backend",
+						"pubsub",
+						"order"
+					],
+					"query": [
+						{
+							"key": "order_id",
+							"value": "order_1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3001/apis/my-backend/pubsub/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"order_id\": \"order_1\",\n    \"event\": \"DELIVERED\",\n    \"foo\": \" PACKED, PICKED_UP, SHIPPED, IN_TRANSIT, DELIVERED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3001/apis/my-backend/pubsub/update"
+			},
+			"response": []
+		}
+	]
+}
