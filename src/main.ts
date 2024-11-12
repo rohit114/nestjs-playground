@@ -6,21 +6,17 @@ import { getLoggingUtil } from './utils';
 import { initMySQL } from './config/mysql.config';
 const logger = getLoggingUtil('MAIN');
 
-// async function bootstrap() {
-//   const app = await NestFactory.create(AppModule);
-//   await app.listen(3000);
-// }
-// bootstrap();
+
 async function bootstrap() {
   validateENVVars();
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('/apis/my-backend');
-  app.useGlobalPipes(new ValidationPipe({ transform: true }));
+  //app.useGlobalPipes(new ValidationPipe({ transform: true }));
   //app.useGlobalFilters(new ExceptionFilterEx()); //todo
   await initDatabases();
   await app.startAllMicroservices();
   const PORT: number = 3001;
-  logger.info('BOOTSTRAP', `BLOGGING_SYS_API_STARTED - PORT: ${PORT}`);
+  logger.info('BOOTSTRAP', `NESTJS_PLAYGROUND_API_STARTED - PORT: ${PORT}`);
 
   await app.listen(PORT);
 }
