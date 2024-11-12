@@ -8,7 +8,7 @@ import { EventDTO } from '../dto/EventDTO';
 import { ValidationError, validateOrReject } from 'class-validator';
 
 
-@Controller('pubsub')
+@Controller('shipment/order')
 export class PubsubController {
 
 
@@ -16,7 +16,7 @@ export class PubsubController {
 
     }
 
-    @Get('order')
+    @Get()
     async getOrderById(
         @Query("order_id") orderId: string,
         @Req() req: Request,

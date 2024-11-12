@@ -20,7 +20,7 @@
 						}
 					}
 				},
-				"url": "localhost:3001/apis/my-backend/pubsub/create"
+				"url": "localhost:3001/apis/my-backend/shipment/order/create"
 			},
 			"response": []
 		},
@@ -30,7 +30,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3001/apis/my-backend/pubsub/order?order_id=order_1",
+					"raw": "localhost:3001/apis/my-backend/shipment/order/?order_id=order_1",
 					"host": [
 						"localhost"
 					],
@@ -52,7 +52,7 @@
 			"response": []
 		},
 		{
-			"name": "localhost:3001/apis/my-backend/pubsub/update",
+			"name": "localhost:3001/apis/my-backend/shipment/order/update",
 			"request": {
 				"method": "PUT",
 				"header": [],

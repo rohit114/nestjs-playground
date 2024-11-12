@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { MyMemory } from '../core/mymemory';
 import { Event, IOrder, IProduct, State } from '../core/interfaces/interfaces';
 import { IShipment } from '../core/interfaces/shipment';
-import { isInstance } from 'class-validator';
 import { plainToInstance } from 'class-transformer';
 import { Order } from '../core/order';
 
